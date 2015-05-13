@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        
+        //Crear Window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        var charactersVC = ARFChraractersViewController(nibName: "ARFChraractersViewController", bundle: nil, model: StarWarsUniverse())
+        
+        //Asignarlo al root
+        window?.rootViewController = UINavigationController(rootViewController: charactersVC)
+        
+        //Mostrarlo
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

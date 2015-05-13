@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARFWikiViewController" customModule="StarWars" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="Rke-4g-qRS" id="lpa-62-wlZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="bOy-q8-LLR" id="rCj-rq-t30"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOy-q8-LLR">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="eWc-md-jjg"/>
+                    </connections>
+                </webView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Rke-4g-qRS">
+                    <rect key="frame" x="290" y="290" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bOy-q8-LLR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8pi-wo-1dc"/>
+                <constraint firstAttribute="trailing" secondItem="bOy-q8-LLR" secondAttribute="trailing" id="CBp-Fz-pj5"/>
+                <constraint firstAttribute="centerX" secondItem="Rke-4g-qRS" secondAttribute="centerX" id="Hfp-LD-set"/>
+                <constraint firstItem="bOy-q8-LLR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LJK-5s-fPx"/>
+                <constraint firstAttribute="bottom" secondItem="bOy-q8-LLR" secondAttribute="bottom" id="QxD-fD-4tQ"/>
+                <constraint firstAttribute="centerY" secondItem="Rke-4g-qRS" secondAttribute="centerY" id="ZRa-1R-msb"/>
+            </constraints>
+            <point key="canvasLocation" x="338" y="540"/>
+        </view>
+    </objects>
+</document>
